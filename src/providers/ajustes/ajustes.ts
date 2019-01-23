@@ -20,7 +20,9 @@ export class AjustesProvider {
       if (this.platform.is('cordova')) {
         this.storage.ready().then(() => {
           this.storage.get('ajustes').then((ajustes) => {
-          this.ajustes = ajustes;
+            if (ajustes) {
+              this.ajustes = ajustes;
+            }
           resolve();
           });
         });
