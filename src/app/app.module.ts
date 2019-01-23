@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { Pagina2Page } from '../pages/pagina2/pagina2';
 import { IonicStorageModule } from '@ionic/storage';
 import { AjustesProvider } from '../providers/ajustes/ajustes';
+import { AlertController } from 'ionic-angular';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AjustesProvider } from '../providers/ajustes/ajustes';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AjustesProvider
+    AjustesProvider,
+    AlertController
   ]
 })
 export class AppModule {}
